@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:padding="0dp" >
+
+    <LinearLayout
+        android:id="@+id/menu_l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:background="#000000"
+            android:padding="5dp"
+            android:src="@drawable/logo_top" />
+
+        <Button
+            android:id="@+id/livestream_button"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickLivestream"
+            android:text="@string/Livestreams" />
+
+        <Button
+            android:id="@+id/videos_button"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickVideos"
+            android:text="@string/Videos" />
+
+        <ImageView
+            android:id="@+id/menu_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:background="#000000"
+            android:onClick="onClickMenu"
+            android:padding="5dp"
+            android:src="@drawable/menu" />
+    </LinearLayout>
+
+    <View.VideoListView
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/menu_l" >
+
+        </View.VideoListView>
+</RelativeLayout>
+
+<ListView
+    android:id="@+id/menu"
+    style="@style/ListViewStyle"
+    android:layout_width="240dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:background="#000000"
+    android:choiceMode="singleChoice"
+    android:visibility="invisible" >
+
+</ListView>
+
+</FrameLayout>

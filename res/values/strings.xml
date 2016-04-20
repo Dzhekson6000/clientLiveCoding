@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="app_name">LiveCoding</string>
+
+    <string name="Livestreams">Трансляции</string>
+
+    <string name="Videos">Видео</string>
+
+    <string name="previous">Назад</string>
+
+    <string name="next">Вперёд</string>
+    
+    <string name="profile">Профиль</string>
+    
+    <string name="myVideos">Мои видео</string>
+    
+    <string name="my_channel">Мой канал</string>
+    
+    <string name="my_follows">Мои подписки</string>
+    
+    <string name="my_followers">Мои подписчики</string>
+    
+    <string name="username">Имя пользователя</string>
+    
+    <string name="follows">Подписки</string>
+    
+    <string name="followers">Подписчики</string>
+    
+</resources>
