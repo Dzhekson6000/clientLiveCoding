@@ -28,5 +28,42 @@
         <item name="android:background">#000000</item>
         <item name="android:textColor">#768e9e</item>
     </style>
+    
+    <style name="ActivityStyle">
+        <item name="android:background">#000000</item>
+        <item name="android:textColor">#768e9e</item>
+    </style>
+    
+    <style name="DescStyle">
+        <item name="android:padding">20dp</item>
+        <item name="android:background">#1976d2</item>
+        <item name="android:textColor">#f1f1f1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+    
+    <style name="ButtonStyleAuth">
+        <item name="android:background">@drawable/textlines</item>
+        <item name="android:textColor">#f1f1f1</item>
+    </style>
+    
+    <style name="DivFlag">
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    
+    <style name="ImageFlag">
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerCrop</item>
+        
+    </style>
+    
+    <style name="DivFlagText">
+        <item name="android:textColor">#768e9e</item>
+        <item name="android:textSize">26sp</item>
+    </style>
 
 </resources>

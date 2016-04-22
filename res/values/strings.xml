@@ -26,4 +26,22 @@
     
     <string name="followers">Подписчики</string>
     
+    <string name="russia">Русский</string>
+    
+    <string name="english">English</string>
+    
+    <string name="deutsch">Deutsch</string>
+    
+    <string name="desc_ru">Присоединитесь к более чем 150 000 кодеров из 194 стран, строящих 3000 продуктов с использованием различных языков программирования.</string>
+    <string name="desc_en">Join over 150,000 coders from 194 countries building 3000 products using a variety of programming languages.</string>
+    <string name="desc_de">Ein eine über 150% 2CH000 Souders Frome 194 sountres 3000 Bauprodukte mit einer Vielzahl Sprachen-Programmierung.</string>
+    
+    <string name="language_ru">Язык</string>
+    <string name="language_en">Language</string>
+    <string name="language_de">Sprache</string>
+    
+    <string name="enter_ru">Войти</string>
+    <string name="enter_en">Enter</string>
+    <string name="enter_de">Eingeben</string>
+    
 </resources>
