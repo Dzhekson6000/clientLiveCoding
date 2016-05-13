@@ -1,10 +1,7 @@
 package View;
 
-import screen.MainActivity;
 import screen.ProfileActivity;
-import screen.VideoActivity;
 import Data.User;
-import Data.ViewVideosItem;
 import View.HttpWraper.OnHttpResponse;
 import android.content.Context;
 import android.content.Intent;

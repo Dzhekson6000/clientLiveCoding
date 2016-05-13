@@ -6,6 +6,7 @@ import io.vov.vitamio.widget.VideoView;
 
 import com.sit.clientlivecoding.R;
 
+import Data.User;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +16,7 @@ import android.view.View;
 public class VideoActivity extends Activity
 {
 	private String url = "";
-	
+	User user = null;
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
@@ -27,13 +28,28 @@ public class VideoActivity extends Activity
 		
 		Intent intent = getIntent();
 		url = intent.getStringExtra("url");
-		url+="?t=35ABD19D8E214C95BA31C46F114600A9";
-
+		
+		User user = new User();
+		user.setOnParse(new User.OnParse()
+		{
+			
+			@Override
+			public void onParse(User user)
+			{
+				VideoActivity.this.user = user;
+				update();
+			}
+		});
+		user.load(null);
+		
+	}
+	
+	public void update()
+	{		
 		MediaController mc = new MediaController(this);
 		
-		
 		VideoView videoView = (VideoView) findViewById(R.id.videoView1);
-		videoView.setVideoPath(url);
+		videoView.setVideoPath(url + "?t="+user.viewing_key);
 		videoView.setMediaController(mc);
 		mc.setAnchorView(videoView);
 		videoView.requestFocus();
@@ -44,6 +60,7 @@ public class VideoActivity extends Activity
             }
         });
 	}
+	
 	
 	public void onClickMenu(View view)
 	{

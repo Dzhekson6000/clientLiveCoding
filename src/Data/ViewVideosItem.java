@@ -35,6 +35,7 @@ public class ViewVideosItem
 	public String region;
 	public int viewers_overall;
 	public String product_type;
+	public String thumbnail_url;
 	
 	public boolean isVideos;
 	
@@ -54,14 +55,7 @@ public class ViewVideosItem
 		
 		ImageView imageView  = (ImageView)view.findViewById(R.id.ImageView1);
 		
-		if(!isVideos)
-		{
-			fetchImage("https://www.livecoding.tv/video/livestream/" + slug + "/thumbnail_250_140/", imageView);
-		}
-		else
-		{
-			imageView.setImageResource(R.drawable.logo_top);
-		}
+		fetchImage(thumbnail_url, imageView);
 		
 		return true;
 	}

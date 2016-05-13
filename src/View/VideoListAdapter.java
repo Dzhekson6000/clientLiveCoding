@@ -69,6 +69,7 @@ public class VideoListAdapter extends BaseAdapter
                 vvi.coding_category=result.getString("coding_category");
                 vvi.difficulty=result.getString("difficulty");
                 vvi.language=result.getString("language");
+                vvi.thumbnail_url=result.getString("thumbnail_url");
                 
         		objects.add(vvi);
             }

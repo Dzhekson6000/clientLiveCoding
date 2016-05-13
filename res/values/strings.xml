@@ -1,30 +1,54 @@
 <resources>
 
-    <string name="app_name">LiveCoding</string>
+    <string name="app_name">LiveCoding.tv</string>
 
-    <string name="Livestreams">Трансляции</string>
+    <string name="Livestreams_ru">Трансляции</string>
+    <string name="Livestreams_en">Livestreams</string>
+    <string name="Livestreams_de">Livestreams</string>
+    
+    <string name="Videos_ru">Видео</string>
+    <string name="Videos_en">Videos</string>
+    <string name="Videos_de">Videos</string>
 
-    <string name="Videos">Видео</string>
-
-    <string name="previous">Назад</string>
-
-    <string name="next">Вперёд</string>
+    <string name="previous_ru">Назад</string>
+    <string name="previous_en">Previous</string>
+    <string name="previous_de">Vorher</string>
     
-    <string name="profile">Профиль</string>
+    <string name="next_ru">Вперёд</string>
+    <string name="next_en">Next</string>
+    <string name="next_de">Nächster</string>
     
-    <string name="myVideos">Мои видео</string>
+    <string name="profile_ru">Профиль</string>
+    <string name="profile_en">Profile</string>
+    <string name="profile_de">Profil</string>
     
-    <string name="my_channel">Мой канал</string>
+    <string name="myVideos_ru">Мои видео</string>
+    <string name="myVideos_en">My videos</string>
+    <string name="myVideos_de">Meine Videos</string>
     
-    <string name="my_follows">Мои подписки</string>
+    <string name="my_channel_ru">Мой канал</string>
+    <string name="my_channel_en">My channel</string>
+    <string name="my_channel_de">Mein Kanal</string>
     
-    <string name="my_followers">Мои подписчики</string>
+    <string name="my_follows_ru">Мои подписки</string>
+    <string name="my_follows_en">My follows</string>
+    <string name="my_follows_de">Mein folgt</string>
     
-    <string name="username">Имя пользователя</string>
+    <string name="my_followers_ru">Мои подписчики</string>
+    <string name="my_followers_en">My followers</string>
+    <string name="my_followers_de">Meine Abonnenten</string>
     
-    <string name="follows">Подписки</string>
+    <string name="username_ru">Имя пользователя</string>
+    <string name="username_en">Username</string>
+    <string name="username_de">Benutzername</string>
     
-    <string name="followers">Подписчики</string>
+    <string name="follows_ru">Подписки</string>
+    <string name="follows_en">Follows</string>
+    <string name="follows_de">Folgt</string>
+    
+    <string name="followers_ru">Подписчики</string>
+    <string name="followers_en">Followers</string>
+    <string name="followers_de">Verfolger</string>
     
     <string name="russia">Русский</string>
     

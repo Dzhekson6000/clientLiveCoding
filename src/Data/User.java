@@ -31,11 +31,28 @@ public class User
 	public int years_programming;
 	public String want_learn;
 	public String registration_date;
+	public String avatar;
+	public String viewing_key;
 	
 	OnParse onParse;
 	
 	public User()
 	{
+	}
+	
+	public boolean parse(String json, String viewkeyJson)
+	{
+		
+		JSONObject result = null;
+        try {
+        	result = new JSONObject(viewkeyJson);             
+            
+        	viewing_key  = result.getString("viewing_key");
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return false;
+        }
+		return parse(json);
 	}
 	
 	public boolean parse(String json)
@@ -47,12 +64,14 @@ public class User
             
         	username  = result.getString("username");
         	slug = result.getString("slug");
+        	avatar=result.getString("avatar");
         	country = result.getString("country");
         	city=result.getString("city");
         	favorite_programming=result.getString("favorite_programming");
             
         } catch (JSONException e) {
             e.printStackTrace();
+            return false;
         }
         
         onParse.onParse(this);
@@ -76,12 +95,13 @@ public class User
 		return true;
 	}
 	
-	public boolean load(String slug)
+	public boolean load(final String slug)
 	{
 		String url = null;
 		if(slug==null)
 		{
 			url = "https://www.livecoding.tv:443/api/user/?format=json";
+			
 		}
 		else
 		{
@@ -93,9 +113,24 @@ public class User
 		httpWraper.setOnHttpResponse(new OnHttpResponse()
 		{
 			@Override
-			public void onRead(String response)
+			public void onRead(final String response)
 			{
-				parse(response);
+				if(slug == null)
+				{
+					HttpWraper httpWraper = new HttpWraper();
+					httpWraper.setOnHttpResponse(new OnHttpResponse()
+					{
+						@Override
+						public void onRead(String response2)
+						{
+							parse(response, response2);
+						}
+					});
+					httpWraper.loadText("https://www.livecoding.tv:443/api/user/viewing_key/");
+				}else
+				{
+					parse(response);
+				}
 			}
 		});
 		httpWraper.loadText(url);

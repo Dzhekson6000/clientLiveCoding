@@ -1,5 +1,7 @@
 package screen;
 
+import screen.AuthActivity.Language;
+
 import com.sit.clientlivecoding.R;
 
 import Data.User;
@@ -11,7 +13,9 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class MainActivity extends Activity
 {	
@@ -29,10 +33,14 @@ public class MainActivity extends Activity
 		videoList = (VideoListView)findViewById(R.id.body);
 		videoList.setType(VideoListView.Type.ALL_STREAM);
 		videoList.load();
-
+		init();
+	}
+	
+	
+	private void createMenu(String previous, String profile, String myVideos,String my_channel,String my_follows,String my_followers)
+	{
+		String[] menu_items = { previous, profile, myVideos, my_channel, my_follows, my_followers};
 		
-		String[] menu_items = { getString(R.string.previous), getString(R.string.profile), getString(R.string.myVideos),
-				getString(R.string.my_channel), getString(R.string.my_follows), getString(R.string.my_followers)};
 		menu = (ListView)findViewById(R.id.menu);
 		ArrayAdapter<String> adapter_menu = new ArrayAdapter<String>(this, R.layout.custom_list_item, menu_items);
 		menu.setAdapter(adapter_menu);
@@ -41,7 +49,35 @@ public class MainActivity extends Activity
 		    	onClickMenu(position);
 		    }
 		});
+	}
+	
+	private void init()
+	{		
+		Button livestream_button = (Button)findViewById(R.id.livestream_button);
+		if(AuthActivity.language == Language.RU)
+			livestream_button.setText(R.string.Livestreams_ru);
+		else if(AuthActivity.language == Language.EN)
+			livestream_button.setText(R.string.Livestreams_en);
+		else if(AuthActivity.language == Language.DE)
+			livestream_button.setText(R.string.Livestreams_de);
 		
+		Button videos_button = (Button)findViewById(R.id.videos_button);
+		if(AuthActivity.language == Language.RU)
+			videos_button.setText(R.string.Videos_ru);
+		else if(AuthActivity.language == Language.EN)
+			videos_button.setText(R.string.Videos_en);
+		else if(AuthActivity.language == Language.DE)
+			videos_button.setText(R.string.Videos_de);
+		
+		if(AuthActivity.language == Language.RU)
+			createMenu(getString(R.string.previous_ru), getString(R.string.profile_ru), getString(R.string.myVideos_ru),
+					getString(R.string.my_channel_ru), getString(R.string.my_follows_ru), getString(R.string.my_followers_ru));
+		else if(AuthActivity.language == Language.EN)
+			createMenu(getString(R.string.previous_en), getString(R.string.profile_en), getString(R.string.myVideos_en),
+					getString(R.string.my_channel_en), getString(R.string.my_follows_en), getString(R.string.my_followers_en));
+		else if(AuthActivity.language == Language.DE)
+			createMenu(getString(R.string.previous_de), getString(R.string.profile_de), getString(R.string.myVideos_de),
+					getString(R.string.my_channel_de), getString(R.string.my_follows_de), getString(R.string.my_followers_de));
 		
 	}
 	
