@@ -46,6 +46,14 @@
             android:src="@drawable/menu" />
     </LinearLayout>
 
+    <!--<ListView
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/menu_l" >
+
+        </ListView>-->
+    
     <View.VideoListView
         android:id="@+id/body"
         android:layout_width="match_parent"
@@ -66,5 +74,14 @@
     android:visibility="invisible" >
 
 </ListView>
+
+<!--<ImageView
+    android:id="@+id/search_button"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_gravity="bottom|right"
+    android:layout_margin="20dp"
+    android:onClick="onClickSearch"
+    android:src="@drawable/search" />-->
 
 </FrameLayout>

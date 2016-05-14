@@ -11,6 +11,8 @@
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="5dp"
+        android:minHeight="72px"
+        android:minWidth="72px"
         android:src="@drawable/user" />
 
     <LinearLayout
@@ -26,7 +28,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/categoria"
             style="@style/TextMainStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

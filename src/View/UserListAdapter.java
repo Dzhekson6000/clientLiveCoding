@@ -1,7 +1,6 @@
 package View;
 
 import java.util.ArrayList;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 

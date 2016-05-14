@@ -75,7 +75,7 @@ public class VideoListView extends ListView
         }
         else if(type == VideoListView.Type.ALL_VIDEOS)
 		{
-        	url = "https://www.livecoding.tv:443/api/videos/?format=json&limit="+limit+"&offset="+offset;
+        	url = "https://www.livecoding.tv:443/api/videos/?format=json&limit="+limit+"&offset="+offset+"&ordering_fields=creation_time";
 		}
         else if(type == VideoListView.Type.MY_VIDEOS)
         {

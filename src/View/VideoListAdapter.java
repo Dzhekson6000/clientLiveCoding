@@ -10,6 +10,7 @@ import com.sit.clientlivecoding.R;
 
 import Data.ViewVideosItem;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -70,7 +71,6 @@ public class VideoListAdapter extends BaseAdapter
                 vvi.difficulty=result.getString("difficulty");
                 vvi.language=result.getString("language");
                 vvi.thumbnail_url=result.getString("thumbnail_url");
-                
         		objects.add(vvi);
             }
             

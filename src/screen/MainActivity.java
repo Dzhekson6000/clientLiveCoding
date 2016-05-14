@@ -15,7 +15,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 public class MainActivity extends Activity
 {	
@@ -52,7 +51,7 @@ public class MainActivity extends Activity
 	}
 	
 	private void init()
-	{		
+	{
 		Button livestream_button = (Button)findViewById(R.id.livestream_button);
 		if(AuthActivity.language == Language.RU)
 			livestream_button.setText(R.string.Livestreams_ru);
@@ -78,6 +77,11 @@ public class MainActivity extends Activity
 		else if(AuthActivity.language == Language.DE)
 			createMenu(getString(R.string.previous_de), getString(R.string.profile_de), getString(R.string.myVideos_de),
 					getString(R.string.my_channel_de), getString(R.string.my_follows_de), getString(R.string.my_followers_de));
+		
+	}
+	
+	public void onClickSearch(View view)
+	{
 		
 	}
 	

@@ -3,6 +3,7 @@ package Data;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -88,9 +89,18 @@ public class User
 		TextView text1 = (TextView)view.findViewById(R.id.title);
 		text1.setText(username);
 		
-		TextView text2 = (TextView)view.findViewById(R.id.textView2);
+		TextView text2 = (TextView)view.findViewById(R.id.categoria);
 		if(city!="null")text2.setText(city);
 
+		ImageView avatar = (ImageView)view.findViewById(R.id.avatar);
+		
+		if(!avatar.equals("null"))
+		{
+			ViewVideosItem.fetchImage(this.avatar, avatar, R.drawable.user);
+		} else 
+		{
+			avatar.setImageResource(R.drawable.user);
+		}
 		
 		return true;
 	}

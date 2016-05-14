@@ -13,6 +13,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -53,15 +54,36 @@ public class ViewVideosItem
 		TextView text2 = (TextView)view.findViewById(R.id.textView2);
 		text2.setText(description);
 		
+		TextView text3 = (TextView)view.findViewById(R.id.categori);
+		if(!coding_category.equals("null"))text3.setText(coding_category);
+				
 		ImageView imageView  = (ImageView)view.findViewById(R.id.ImageView1);
+		fetchImage(thumbnail_url, imageView, R.drawable.logo_top);
 		
-		fetchImage(thumbnail_url, imageView);
+		ImageView imageView2  = (ImageView)view.findViewById(R.id.langeage);
+		if(language.equals("English"))
+		{
+			imageView2.setImageResource(R.drawable.flag_us);
+		} else if(language.equals("Russian"))
+		{
+			imageView2.setImageResource(R.drawable.flag_ru);
+		} else if(language.equals("French"))
+		{
+			imageView2.setImageResource(R.drawable.flag_fr);
+		} else if(language.equals("Spanish"))
+		{
+			imageView2.setImageResource(R.drawable.flag_es);
+		} else if(language.equals("German"))
+		{
+			imageView2.setImageResource(R.drawable.flag_de);
+		}
+		
 		
 		return true;
 	}
 	
 	
-	public static void fetchImage(final String iUrl, final ImageView iView) {
+	public static void fetchImage(final String iUrl, final ImageView iView,int default_image) {
 	    if ( iUrl == null || iView == null )
 	      return;
 	 
@@ -83,7 +105,7 @@ public class ViewVideosItem
 	        }
 	      }
 	    };
-	    iView.setImageResource(R.drawable.logo_top);
+	    iView.setImageResource(default_image);
 	    thread.setPriority(3);
 	    thread.start();
 	  }
